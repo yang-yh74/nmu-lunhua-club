@@ -11,7 +11,7 @@
 - 在线报名系统
 
 ## 访问地址
-- 在线演示：https://lunhua.github.io
+- 在线演示：https://nmu-lunhua-club.github.io
 - 备用地址：https://numlunhua.vercel.app
 
 ## 技术栈
