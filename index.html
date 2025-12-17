@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北方民族大学轮滑社 - 风驰电掣，滑出精彩</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #003C71;
+            --secondary-color: #FFD100;
+            --accent-color: #E63946;
+            --light-bg: #f8f9fa;
+            --dark-bg: #00274D;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(rgba(0, 60, 113, 0.85), rgba(0, 60, 113, 0.9)), url('https://images.unsplash.com/photo-1547447138-6da976f5b8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .university-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(0, 60, 113, 0.95);
+            border-bottom: 3px solid var(--secondary-color);
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .university-header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .university-header .english-name {
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        nav {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 8px 15px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            left: 50%;
+            bottom: 0;
+            transition: var(--transition);
+        }
+
+        nav a:hover:after,
+        nav a.active:after {
+            width: 100%;
+            left: 0;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .hero-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(255, 209, 0, 0.3);
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        .btn:hover {
+            background-color: #ffdd33;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 209, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        /* 主要内容区样式 */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* 关于我们 */
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-dark);
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* 教师风采 */
+        .teacher-section {
+            background-color: #f0f5ff;
+        }
+
+        .teacher-content {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .teacher-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-dark);
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            transition: var(--transition);
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .teacher-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+        }
+
+        .teacher-card:hover .teacher-header:before {
+            animation: shimmer 1.5s ease;
+        }
+
+        .teacher-header h3 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .teacher-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            letter-spacing: 2px;
+        }
+
+        .teacher-details {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .teacher-photo {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* 老师图片区域 - 这里放置老师照片 */
+        .teacher-photo .photo-frame {
+            width: 280px;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-dark);
+            border: 5px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .teacher-photo .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .teacher-photo .photo-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        .teacher-info {
+            flex: 1.5;
+            min-width: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .teacher-info-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .teacher-info-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .teacher-info-item h4 i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .teacher-info-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .course-tag {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .course-tag:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* 社团活动 */
+        .activities {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .activities:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
+        }
+
+        .activities .section-title h2 {
+            color: var(--white);
+        }
+
+        .activities .section-title h2:after {
+            background-color: var(--white);
+        }
+
+        .activity-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .activity-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 209, 0, 0.3);
+        }
+
+        .activity-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .activity-img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5));
+        }
+
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-card:hover .activity-img img {
+            transform: scale(1.05);
+        }
+
+        .activity-content {
+            padding: 25px;
+        }
+
+        .activity-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .activity-content p {
+            margin-bottom: 15px;
+        }
+
+        /* 轮滑图片展示 */
+        .gallery {
+            background-color: var(--light-bg);
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover:after {
+            opacity: 1;
+        }
+
+        /* 加入我们 */
+        .join-us {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join-us:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 60, 113, 0.05) 0%, rgba(255, 209, 0, 0.05) 100%);
+        }
+
+        .join-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .join-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .join-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-dark);
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 60, 113, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-dark);
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--dark-bg);
+            color: #bdc3c7;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            margin-right: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero-content h2 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1.3rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--primary-color);
+                padding: 80px 30px 30px;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0 0 20px 0;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.2rem;
+            }
+
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .university-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .teacher-card {
+                flex-direction: column;
+            }
+
+            .teacher-photo, .teacher-info {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-links {
+                align-items: center;
+            }
+
+            .activity-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .teacher-photo .photo-frame {
+                width: 250px;
+                height: 300px;
+            }
+
+            .join-form {
+                padding: 25px;
+            }
+
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* 轮滑图标动画 */
+        .skate-icon {
+            animation: skateFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes skateFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="university-header">
+            <h1>北方民族大学</h1>
+            <div class="english-name">North Minzu University</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav id="mainNav">
+            <button class="close-menu" id="closeMenuBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul>
+                <li><a href="#about" class="active">关于我们</a></li>
+                <li><a href="#teacher">教师风采</a></li>
+                <li><a href="#activities">社团活动</a></li>
+                <li><a href="#gallery">精彩瞬间</a></li>
+                <li><a href="#join">加入我们</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h2>北方民族大学轮滑社</h2>
+            <p>风驰电掣，滑出精彩！我们是一支充满激情与活力的团队，在专业教师指导下不断进步</p>
+            <a href="#join" class="btn">立即加入轮滑社</a>
+        </div>
+    </header>
+
+    <!-- 关于我们 -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于轮滑社</h2>
+                <p>北方民族大学最具活力的学生社团之一</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我们的故事</h3>
+                    <p>北方民族大学轮滑社成立于2015年，是一支充满活力与激情的团队。我们致力于推广轮滑运动，为全校师生提供学习、交流和展示的平台。</p>
+                    <p>社团现有成员200余人，涵盖从初学者到专业选手的各个水平。我们在丁平老师的专业指导下，定期组织训练、比赛和户外活动，让成员们在安全的环境中享受轮滑的乐趣。</p>
+                    <p>无论你是想学习基础轮滑技巧，还是想挑战高难度动作，或是仅仅想结交志同道合的朋友，北方民族大学轮滑社都欢迎你的加入！</p>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="200">0</span>
+                            <span class="stat-label">社团成员</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-label">成立年份</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label">获奖次数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">活动次数/年</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="image/fc73c6c95765ee43b15e58a9bebc1956.jpg" alt="轮滑社集体活动">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教师风采 -->
+    <section id="teacher" class="teacher-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>教师风采</h2>
+                <p>专业师资指导，助力学生成长</p>
+            </div>
+
+            <div class="teacher-content">
+                <div class="teacher-card">
+                    <div class="teacher-header">
+                        <h3>体育学院</h3>
+                        <div class="subtitle">教师风采 JIAOSHIFENGCAI</div>
+                    </div>
+
+                    <div class="teacher-details">
+                        <div class="teacher-photo">
+                            <!-- 老师图片区域 -->
+                            <div class="photo-frame">
+                                <!-- 这里放置丁平老师的照片 -->
+                                <img src="image/47a79bf69ea49a69a310bd10a82cc2bb.jpg" alt="丁平老师">
+                            </div>
+                        </div>
+
+                        <div class="teacher-info">
+                            <div class="teacher-info-item">
+                                <h4><i class="fas fa-user"></i> 姓名：丁平</h4>
+                                <p><strong>职称：</strong>助教</p>
+                            </div>
+
+                            <div class="teacher-info-item">
+                                <h4><i class="fas fa-graduation-cap"></i> 学历/学位</h4>
+                                <p>研究生/硕士</p>
+                            </div>
+
+                            <div class="teacher-info-item">
+                                <h4><i class="fas fa-book"></i> 承担课程</h4>
+                                <div class="course-list">
+                                    <span class="course-tag">《公共体育》</span>
+                                    <span class="course-tag">《轮滑》</span>
+                                    <span class="course-tag">《体适能》</span>
+                                </div>
+                            </div>
+
+                            <div class="teacher-info-item">
+                                <h4><i class="fas fa-star"></i> 教学专长</h4>
+                                <p>丁平老师具有丰富的轮滑教学经验，擅长速滑、花样轮滑和自由式轮滑技术指导。在丁老师的指导下，我校轮滑社成员在多项比赛中取得优异成绩，其中包括全国大学生轮滑锦标赛的多个奖项。</p>
+                                <p>丁老师注重理论与实践相结合，强调安全第一的教学理念，深受学生喜爱。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社团活动 -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-title">
+                <h2>社团活动</h2>
+                <p>丰富多彩的轮滑活动，总有一款适合你</p>
+            </div>
+
+            <div class="activity-cards">
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="image/8cc689d42f8d89a0e76d606d2ba2ddd2.jpg" alt="日常训练">
+                    </div>
+                    <div class="activity-content">
+                        <h3>日常训练</h3>
+                        <p>每周二、四、六晚上7-9点在学校轮滑场进行基础训练和技术提升。</p>
+                        <p>由丁平老师和社团骨干成员指导，适合各个水平的轮滑爱好者。</p>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="https://images.unsplash.com/photo-1547447138-6da976f5b8d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="周末刷街">
+                    </div>
+                    <div class="activity-content">
+                        <h3>周末刷街</h3>
+                        <p>每周日下午，探索城市的不同路线，感受轮滑与城市风景的完美结合。</p>
+                        <p>活动路线经过精心规划，确保安全和趣味性。</p>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-img">
+                        <img src="image/38fce5081e75292a3855b31e84339540.jpg" alt="技巧比赛">
+                    </div>
+                    <div class="activity-content">
+                        <h3>技巧比赛</h3>
+                        <p>每月举办一次，分为不同难度级别，展示你的轮滑技巧，赢取精美奖品。</p>
+                        <p>年度冠军将有机会代表学校参加全国比赛。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精彩瞬间 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>精彩瞬间</h2>
+                <p>记录轮滑社的美好时刻</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="training">日常训练</button>
+                <button class="filter-btn" data-filter="competition">比赛瞬间</button>
+                <button class="filter-btn" data-filter="activity">社团活动</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="activity">
+                    <img src="image/00a4036f597a7736631c2319947ca3ed.jpg" alt="轮滑训练">
+                </div>
+                <div class="gallery-item" data-category="competition">
+                    <img src="image/6730a5d4b18c27216a1ec65139ac56d9.jpg" alt="轮滑比赛">
+                </div>
+                <div class="gallery-item" data-category="activity">
+                    <img src="image/cdaf3306d2420da5e12e7dcfaaeb1c08.jpg" alt="轮滑表演">
+                </div>
+                <div class="gallery-item" data-category="training">
+                    <img src="image/90a2fd9d2b99d5bb9d7a91270968d6a1.jpg" alt="轮滑社团建">
+                </div>
+                <div class="gallery-item" data-category="training">
+                    <img src="image/6ef49b18573f6ffd52ff45ca884e4bd7.jpg" alt="轮滑训练">
+                </div>
+                <div class="gallery-item" data-category="competition">
+                    <img src="image/73a0bf475ea85cc3aea21f146902e1ca.jpg" alt="轮滑比赛">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入我们 -->
+    <section id="join" class="join-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>加入我们</h2>
+                <p>开启你的轮滑之旅</p>
+            </div>
+
+            <div class="join-content">
+                <p>北方民族大学轮滑社欢迎所有热爱轮滑运动的同学加入！无论你是零基础初学者，还是经验丰富的轮滑高手，这里都有适合你的位置。</p>
+                <p>加入我们，你将获得专业指导、参与丰富活动、结交志同道合的朋友，更有机会代表学校参加全国比赛！</p>
+
+                <div class="join-form">
+                    <h3 style="color: var(--primary-color); margin-bottom: 25px; text-align: center;">报名申请表</h3>
+                    <form id="joinForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentId">学号</label>
+                            <input type="text" id="studentId" name="studentId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="college">学院</label>
+                            <input type="text" id="college" name="college" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">轮滑经验</label>
+                            <select id="experience" name="experience">
+                                <option value="beginner">零基础</option>
+                                <option value="basic">基础水平</option>
+                                <option value="intermediate">中级水平</option>
+                                <option value="advanced">高级水平</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" name="message" rows="4" placeholder="请简单介绍一下你的轮滑经历和加入社团的期望..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">提交申请</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p><strong>活动地点</strong></p>
+                            <p>北方民族大学轮滑场 / 体育学院训练馆</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p><strong>活动时间</strong></p>
+                            <p>每周二、四、六 19:00-21:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <p><strong>指导老师</strong></p>
+                            <p>丁平老师（体育学院）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-skating"></i>
+                        <span>北方民族大学轮滑社</span>
+                    </div>
+                    <p style="max-width: 300px; margin-top: 10px;">北方民族大学最具活力的学生社团之一，致力于推广轮滑运动，培养轮滑人才。</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 style="color: var(--white); margin-bottom: 15px;">快速链接</h4>
+                    <a href="#about">关于我们</a>
+                    <a href="#teacher">教师风采</a>
+                    <a href="#activities">社团活动</a>
+                    <a href="#join">加入我们</a>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 15px;">关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 北方民族大学轮滑社 版权所有 | 指导单位：北方民族大学体育学院</p>
+                <p>地址：宁夏回族自治区银川市西夏区北方民族大学 | 联系电话：0951-XXXXXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+        });
+
+        // 导航链接点击后关闭移动菜单
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+            });
+        });
+
+        // 平滑滚动导航
+        document.querySelectorAll('nav a, .btn').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // 更新活动导航项
+                        document.querySelectorAll('nav a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // 滚动时更新导航项
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 显示/隐藏返回顶部按钮
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // 返回顶部功能
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 统计数字动画
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target;
+                    const target = parseInt(statNumber.getAttribute('data-count'));
+                    const duration = 2000; // 动画时长
+                    const step = target / (duration / 16); // 每16ms增加的值
+                    let current = 0;
+
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        statNumber.textContent = Math.floor(current);
+                    }, 16);
+
+                    observer.unobserve(statNumber);
+                }
+            });
+        }, observerOptions);
+
+        statNumbers.forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // 图片库筛选功能
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 更新活动按钮
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                // 筛选图片
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // 加入表单提交
+        document.getElementById('joinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // 这里可以添加表单验证和提交逻辑
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // 模拟提交成功
+            alert('报名申请已提交成功！\n\n我们将尽快与你联系，请保持电话畅通。\n\n欢迎加入北方民族大学轮滑社！');
+            this.reset();
+        });
+
+        // 图片懒加载效果
+        const galleryItemsAll = document.querySelectorAll('.gallery-item');
+        galleryItemsAll.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.03)';
+            });
+
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // 页面加载动画
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
